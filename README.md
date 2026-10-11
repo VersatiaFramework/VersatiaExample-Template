@@ -18,8 +18,10 @@ Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExa
 
 ## Building
 
-Requires JDK 21 and VersatiaAPI in your local Maven repository (`./gradlew publishToMavenLocal`
-in its checkout); running it requires a Paper 1.21.4 server with VersatiaCore installed.
+Requires JDK 21 and VersatiaStarter with what it exports (VersatiaAPI, the module APIs) in your
+local Maven repository (`./gradlew publishToMavenLocal` in each checkout; see
+[Building the framework](https://versatiaframework.github.io/VersatiaDocs/docs/contributing/building));
+running it requires a Paper 1.21.4 server with VersatiaCore installed.
 
 ```bash
 ./gradlew build

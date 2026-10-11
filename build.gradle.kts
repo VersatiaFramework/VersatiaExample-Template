@@ -12,17 +12,17 @@ version = "0.0.1"
 val apiVersion = "0.0.1"
 
 repositories {
-    // VersatiaAPI is consumed from the local Maven repository (`./gradlew publishToMavenLocal` in its checkout)
+    // The Versatia artifacts are consumed from the local Maven repository (`./gradlew publishToMavenLocal` in each checkout)
     mavenLocal()
     mavenCentral()
     // Needed to resolve the Paper API that VersatiaAPI exports
     maven("https://repo.papermc.io/repository/maven-public/")
 }
 
-// Paper API and the Kotlin standard library are inherited from VersatiaAPI; nothing is bundled,
-// on the server these classes come from VersatiaCore (see plugin.yml)
+// The starter exports VersatiaAPI (with the Paper API and Kotlin) and the module APIs; nothing is bundled,
+// on the server these classes come from VersatiaCore and the module plugins (see plugin.yml)
 dependencies {
-    implementation("com.github.marcoral.versatia:VersatiaAPI:$apiVersion")
+    implementation("com.github.marcoral.versatia:VersatiaStarter:$apiVersion")
     ksp("com.github.marcoral.versatia:VersatiaAPI-ksp:$apiVersion")
 }
 
