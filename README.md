@@ -21,7 +21,8 @@ Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExa
 Requires JDK 21 and VersatiaStarter with what it exports (VersatiaAPI, the module APIs) in your
 local Maven repository (`./gradlew publishToMavenLocal` in each checkout; see
 [Building the framework](https://versatiaframework.github.io/VersatiaDocs/docs/contributing/building));
-running it requires a Paper 1.21.4 server with VersatiaCore installed.
+running it requires a Paper 1.21.4 server with VersatiaCore installed. If "Things to try" reloads,
+add: and the [CommandAPI](https://commandapi.jorel.dev) 12.x plugin for `/versatia reload`.
 
 ```bash
 ./gradlew build
@@ -36,6 +37,7 @@ To have the JAR copied to your server after every build, copy `local.properties.
 1. Create the repository from this template, named `VersatiaExample-<Topic>-<Feature>`.
 2. Rename `rootProject.name` in `settings.gradle.kts`, `name` and `main` in `plugin.yml`, the
    package and the main class.
-3. Replace this README, keeping its sections.
+3. Replace this README, keeping its sections. The build checks that `plugin.yml` parses and lists
+   VersatiaCore under `depend:`.
 4. Add the example to the [VersatiaExamples](https://github.com/VersatiaFramework/VersatiaExamples) catalogue and an
    example card to the documentation page it illustrates.
