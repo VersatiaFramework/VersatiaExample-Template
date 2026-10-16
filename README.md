@@ -18,8 +18,8 @@ Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExa
 
 ## Building
 
-Requires JDK 21 and VersatiaStarter with what it exports (VersatiaAPI, the module APIs) in your
-local Maven repository (`./gradlew publishToMavenLocal` in each checkout; see
+Requires JDK 21 and VersatiaStarter with what it exports (VersatiaAPI, the module APIs) and
+VersatiaCatalog, which supplies every version, in your local Maven repository (`./gradlew publishToMavenLocal` in each checkout; see
 [Building the framework](https://versatiaframework.github.io/VersatiaDocs/docs/contributing/building));
 running it requires a Paper 1.21.4 server with VersatiaCore installed. If "Things to try" reloads,
 add: and the [CommandAPI](https://commandapi.jorel.dev) 12.x plugin for `/versatia reload`.
@@ -31,6 +31,11 @@ add: and the [CommandAPI](https://commandapi.jorel.dev) 12.x plugin for `/versat
 To have the JAR copied to your server after every build, copy `local.properties.example` to
 `local.properties` and set `pluginsDir`. The generated descriptor is in
 `build/generated/ksp/main/kotlin`; open it to see exactly what the runtime executes.
+
+The Versatia version is `versatiaVersion` in `gradle.properties`; `settings.gradle.kts` imports
+the matching [VersatiaCatalog](https://versatiaframework.github.io/VersatiaDocs/docs/getting-started/installation#versatia-catalog),
+so the build script writes `libs.versatia.starter` and `alias(libs.plugins.ksp)` instead of version
+numbers.
 
 ## Using this template
 
