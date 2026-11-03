@@ -2,9 +2,9 @@
 
 One sentence: what this example shows.
 
-Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Example plugins](https://versatiaframework.github.io/VersatiaDocs/docs/examples).
+Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Example plugins](https://versatia.dev/docs/examples).
 
-**Start with** [`ExamplePlugin.kt`](src/main/kotlin/com/github/marcoral/versatia/example/template/ExamplePlugin.kt).
+**Start with** [`ExamplePlugin.kt`](src/main/kotlin/dev/versatia/example/template/ExamplePlugin.kt).
 
 ## What the log shows
 
@@ -20,7 +20,7 @@ Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExa
 
 Requires JDK 21 and VersatiaAPI and
 VersatiaCatalog, which supplies every version, in your local Maven repository (`./gradlew publishToMavenLocal` in each checkout; see
-[Building the framework](https://versatiaframework.github.io/VersatiaDocs/docs/contributing/building));
+[Building the framework](https://versatia.dev/docs/contributing/building));
 running it requires a Paper 1.21.4 server with VersatiaCore installed. If "Things to try" reloads,
 add: and the [CommandAPI](https://commandapi.jorel.dev) 12.x plugin for `/versatia reload`.
 
@@ -33,7 +33,7 @@ To have the JAR copied to your server after every build, copy `local.properties.
 `build/generated/ksp/main/kotlin`; open it to see exactly what the runtime executes.
 
 The Versatia version is `versatiaVersion` in `gradle.properties`; `settings.gradle.kts` imports
-the matching [VersatiaCatalog](https://versatiaframework.github.io/VersatiaDocs/docs/getting-started/installation#versatia-catalog),
+the matching [VersatiaCatalog](https://versatia.dev/docs/getting-started/installation#versatia-catalog),
 so the build script writes `libs.versatia.api` and `alias(libs.plugins.ksp)` instead of version
 numbers.
 

@@ -1,6 +1,6 @@
 name: VersatiaExample-Template
 version: '${version}'
-main: com.github.marcoral.versatia.example.template.ExamplePlugin
+main: dev.versatia.example.template.ExamplePlugin
 api-version: '1.21'
 author: Versatia
 description: One Versatia feature, shown as simply as possible.
